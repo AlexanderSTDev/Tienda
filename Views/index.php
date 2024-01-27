@@ -117,6 +117,12 @@ if ($_POST) {
   </form>
 </div>
 
+<div class="text-center mb-5 mt-5 w-50 mx-auto ">
+  <button class="btn btn-primary">
+    <a href="Views/template/ia.php">Checkout</a>
+  </button>
+</div>
+
 
 <?php include_once 'Views/template/footer-principal.php'; ?>
 
@@ -155,6 +161,32 @@ if ($_POST) {
     ]
   });
 </script>
+
+<!-- <script src="https://unpkg.com/react-stackai@latest/dist/vanilla/vanilla-stackai.js" data-project-url="https://www.stack-ai.com/embed/02060f1d-9b30-47f7-8bc2-7574eeb4aba0/4d53432d-e40d-49d7-90b4-275c6544749a/65b3ea18c6c9f18b0efaab68">
+</script> -->
+
+<!-- <script>
+  async function query(data) {
+    const response = await fetch(
+      "https://www.stack-inference.com/run_deployed_flow?flow_id=65b3e9548917c44b840e42a7&org=02060f1d-9b30-47f7-8bc2-7574eeb4aba0", {
+        headers: {
+          'Authorization': 'Bearer XXXXXXXXXXXXX',
+          'Content-Type': 'application/json'
+        },
+        method: "POST",
+        body: JSON.stringify(data),
+      }
+    );
+    const result = await response.json();
+    return result;
+  }
+
+  query({
+    "in-0": `, "user_id": <USER or Conversation ID>`
+  }).then((response) => {
+    console.log(JSON.stringify(response));
+  });
+</script> -->
 
 </body>
 
