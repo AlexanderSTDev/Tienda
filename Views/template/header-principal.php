@@ -42,8 +42,6 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    <script src="https://www.paypal.com/sdk/js?client-id=<?php echo CLIENT_ID; ?>&currency=<?php echo MONEDA; ?>"></script>
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
    <!-- Chatbot -->
    <style>
       .chatbot {
@@ -78,89 +76,90 @@
 
 <body>
    <!-- banner bg main start -->
-   <div class="banner_bg_main">
-      <!-- header top section start -->
-      <div class="container">
-         <div class="header_section_top">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="custom_menu">
-                     <ul>
-                        <li><a href="#">Tienda Online</a></li>
-                     </ul>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- header top section start -->
-      <!-- logo section start -->
-      <div class="logo_section">
+   <div class="banner_bg_main fondo">
+      <div class="fondo">
+         <!-- header top section start -->
          <div class="container">
-            <div class="row">
-               <div class="col-sm-12">
-                  <div class="logo"><a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>assets/images/logo.png" width="50"></a></div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- logo section end -->
-      <!-- header section start -->
-      <div class="header_section">
-         <div class="container">
-            <div class="containt_main">
-               <div id="mySidenav" class="sidenav">
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                  <?php foreach ($data['categorias'] as $categoria) { ?>
-                     <a href="#categoria_<?php echo $categoria['id']; ?>"><?php echo $categoria['categoria']; ?></a>
-                  <?php } ?>
-               </div>
-               <span class="toggle_icon" onclick="openNav()"><img src="<?php echo BASE_URL; ?>assets/principal/images/toggle-icon.png"></span>
-               <div class="dropdown">
-                  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias
-                  </button>
-                  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                     <?php foreach ($data['categorias'] as $categoria) { ?>
-                        <a class="dropdown-item" href="#categoria_<?php echo $categoria['id']; ?>"><?php echo $categoria['categoria']; ?></a>
-                     <?php } ?>
-                  </div>
-               </div>
-               <div class="main">
-                  <!-- Another variation with a button -->
-                  <div class="input-group">
-                     <input type="text" class="form-control" placeholder="¿Que estas buscando?" id="search">
-                     <div class="input-group-append">
-                        <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
-                           <i class="fa fa-search"></i>
-                        </button>
+            <div class="header_section_top">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="custom_menu">
+                        <ul>
+                           <li><a href="#">Tienda Online</a></li>
+                        </ul>
                      </div>
                   </div>
-                  <div class="position-absolute row" id="resultBusqueda" style="z-index: 99999;"></div>
                </div>
-               <div class="header_box">
-                  <div class="login_menu">
-                     <ul>
-                        <li><a href="#" id="verCarrito">
-                              <i class="fa fa-shopping-cart" aria-hidden="true"></i>
-                              <span class="padding_10" id="btnCantidadCarrito">Cart</span></a>
-                        </li>
-                        <?php if (empty($_SESSION['nombreCliente'])) {
-                           echo '<li><a href="#" data-toggle="modal" data-target="#modalLogin">
+            </div>
+         </div>
+         <!-- header top section start -->
+         <!-- logo section start -->
+         <div class="logo_section">
+            <div class="container">
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="logo"><a href="<?php echo BASE_URL; ?>"><img src="<?php echo BASE_URL; ?>assets/images/logo.png" width="50"></a></div>
+                  </div>
+               </div>
+            </div>
+         </div>
+         <!-- logo section end -->
+         <!-- header section start -->
+         <div class="header_section">
+            <div class="container">
+               <div class="containt_main">
+                  <div id="mySidenav" class="sidenav">
+                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+                     <?php foreach ($data['categorias'] as $categoria) { ?>
+                        <a href="#categoria_<?php echo $categoria['id']; ?>"><?php echo $categoria['categoria']; ?></a>
+                     <?php } ?>
+                  </div>
+                  <span class="toggle_icon" onclick="openNav()"><img src="<?php echo BASE_URL; ?>assets/principal/images/toggle-icon.png" width="35"></span>
+                  <div class="dropdown">
+                     <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Categorias
+                     </button>
+                     <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <?php foreach ($data['categorias'] as $categoria) { ?>
+                           <a class="dropdown-item" href="#categoria_<?php echo $categoria['id']; ?>"><?php echo $categoria['categoria']; ?></a>
+                        <?php } ?>
+                     </div>
+                  </div>
+                  <div class="main">
+                     <!-- Another variation with a button -->
+                     <div class="input-group">
+                        <input type="text" class="form-control" placeholder="¿Que estas buscando?" id="search">
+                        <div class="input-group-append">
+                           <button class="btn btn-secondary" type="button" style="background-color: #f26522; border-color:#f26522 ">
+                              <i class="fa fa-search"></i>
+                           </button>
+                        </div>
+                     </div>
+                     <div class="position-absolute row" id="resultBusqueda" style="z-index: 99999;"></div>
+                  </div>
+                  <div class="header_box">
+                     <div class="login_menu">
+                        <ul>
+                           <li><a href="#" id="verCarrito">
+                                 <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                                 <span class="padding_10" id="btnCantidadCarrito">Cart</span></a>
+                           </li>
+                           <?php if (empty($_SESSION['nombreCliente'])) {
+                              echo '<li><a href="#" data-toggle="modal" data-target="#modalLogin">
                                  <i class="fa fa-user" aria-hidden="true"></i>
                                  <span class="padding_10">Login</span></a>
                            </li>';
-                        } else {
-                           echo '<li><a href="' . BASE_URL . 'clientes">
+                           } else {
+                              echo '<li><a href="' . BASE_URL . 'clientes">
                                  <i class="fa fa-user" aria-hidden="true"></i>
                                  <span class="padding_10 text-capitalize">' . $_SESSION['nombreCliente'] . '</span></a>
                            </li>';
-                        }
-                        ?>
+                           }
+                           ?>
 
-                     </ul>
+                        </ul>
+                     </div>
                   </div>
                </div>
             </div>
          </div>
-      </div>
-      <!-- header section end -->
+         <!-- header section end -->
