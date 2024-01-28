@@ -160,6 +160,11 @@
     </div>
 </div>
 
+<!-- Boton flotante -->
+<div class="chatbot">
+    <a href="Views/template/ai.php"><i class='bx bx-bot'></i></a>
+</div>
+
 <?php include_once 'Views/template/footer-principal.php'; ?>
 
 <script type="text/javascript" src="<?php echo BASE_URL . 'assets/DataTables/datatables.min.js'; ?>"></script>
