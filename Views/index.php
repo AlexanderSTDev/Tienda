@@ -96,7 +96,7 @@ if ($_POST) {
 <!-- Section Contact -->
 <section>
   <div class="container mb-5">
-    <p class="text-center mb-5 font-weight-bold text-uppercase fs-1">Contacto</p>
+    <p class="title-contact text-center mb-5 font-weight-bold text-uppercase fs-1">Contacto</p>
     <form class="w-50 mx-auto" method="post" action="index.php">
       <div class="mb-3">
         <label for="nombre" class="form-label">Nombre</label>
