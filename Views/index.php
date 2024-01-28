@@ -126,7 +126,7 @@ if ($_POST) {
 
 <!-- Boton flotante -->
 <div class="chatbot">
-  <a href="Views/template/ai.php" target="_blank"><i class='bx bx-bot'></i></a>
+  <a href="Views/template/ai.php"><i class='bx bx-bot'></i></a>
 </div>
 
 

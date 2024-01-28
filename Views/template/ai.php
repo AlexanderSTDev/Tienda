@@ -76,13 +76,13 @@
     </iframe>
 
     <!-- Botón en la esquina inferior derecha -->
-    <!-- <div class="fixed-button">
+    <div class="fixed-button">
         <div class="text-center mb-5 mt-5 w-50 mx-auto">
             <button class="btn btn-primary">
-                <a href="../index.php">Regresar</a>
+                <a href="http://localhost/Tienda3/">Regresar</a>
             </button>
         </div>
-    </div> -->
+    </div>
 
 </body>
 
