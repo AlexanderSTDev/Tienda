@@ -83,7 +83,7 @@ if ($_POST) {
               </div>
               <div class="btn_main">
                 <div class="buy_bt"><a href="#" class="btnAddcarrito" prod="<?php echo $producto['id']; ?>">Añadir</a></div>
-                <div class="seemore_bt"><a href="#">Leer más</a></div>
+                <div class="seemore_bt"><a href="Views/detalles_productos.php?id=<?php echo $producto['id']; ?>&token=<?php echo hash_hmac('sha1', $producto['id'], KEY_TOKEN); ?>">Leer más</a></div>
               </div>
             </div>
           </div>

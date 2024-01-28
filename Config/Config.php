@@ -13,3 +13,5 @@ const USER_SMTP = "gamer24minecraft@gmail.com";
 const PASS_SMTP = "lbrezlgfyycpxxqy";
 const PUERTO_SMTP = 465;
 const HOST_SMTP = "smtp.gmail.com";
+
+define("KEY_TOKEN", "ABC.wqc-354*");
