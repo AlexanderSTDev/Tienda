@@ -41,7 +41,31 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
    <script src="https://www.paypal.com/sdk/js?client-id=<?php echo CLIENT_ID; ?>&currency=<?php echo MONEDA; ?>"></script>
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    <!-- Chatbot -->
+   <style>
+      .chatbot {
+         position: fixed;
+         bottom: 20px;
+         right: 20px;
+         z-index: 999;
+         cursor: pointer;
+         width: 50px;
+         height: 50px;
+         border-radius: 50%;
+         background-color: #f26522;
+         text-align: center;
+         line-height: 50px;
+         font-size: 24px;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+         transition: all 0.3s ease;
+      }
+
+      .bx-bot {
+         color: #fff;
+         font-weight: 700;
+      }
+   </style>
 
    <style>
       .table>tbody>tr>td {

@@ -11,9 +11,13 @@ if ($_POST) {
   $telefono = $_POST['telefono'];
   $mensaje = $_POST['mensaje'];
 
-  $conexion = new Conexion();
-  $sql = "INSERT INTO `contactos` (`Nombres`, `Apellidos`, `Correo`, `Telefono`, `Mensaje`) VALUES ('$nombre', '$apellidos', '$correo', '$telefono', '$mensaje');";
-  $conexion->ejecutar($sql);
+  if ($nombre == '' || $apellidos == '' || $correo == '' || $telefono == '' || $mensaje == '') {
+    echo '<script>alert("Todos los campos son obligatorios");</script>';
+  } else {
+    $conexion = new Conexion();
+    $sql = "INSERT INTO `contactos` (`Nombres`, `Apellidos`, `Correo`, `Telefono`, `Mensaje`) VALUES ('$nombre', '$apellidos', '$correo', '$telefono', '$mensaje');";
+    $conexion->ejecutar($sql);
+  }
 }
 
 
@@ -90,37 +94,39 @@ if ($_POST) {
 <?php } ?>
 
 <!-- Section Contact -->
-<div class="container mb-5">
-  <form class="w-50 mx-auto" method="post" action="index.php">
-    <div class="mb-3">
-      <label for="nombre" class="form-label">Nombre</label>
-      <input type="text" class="form-control" id="nombre" name="nombre">
-    </div>
-    <div class="mb-3">
-      <label for="apellidos" class="form-label">Apellidos</label>
-      <input type="text" class="form-control" id="apellidos" name="apellidos">
-    </div>
-    <div class="mb-3">
-      <label for="correo" class="form-label">Correo</label>
-      <input type="email" class="form-control" id="correo" name="correo" aria-describedby="emailHelp">
-      <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-    </div>
-    <div class="mb-3">
-      <label for="telefono" class="form-label">telefono</label>
-      <input type="text" class="form-control" id="telefono" name="telefono">
-    </div>
-    <div class="mb-3">
-      <label for="mensaje" class="form-label">Mensaje</label>
-      <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-  </form>
-</div>
+<section>
+  <h1 class="text-center mb-5 font-weight-bold text-uppercase">Contacto</h1>
+  <div class="container mb-5">
+    <form class="w-50 mx-auto" method="post" action="index.php">
+      <div class="mb-3">
+        <label for="nombre" class="form-label">Nombre</label>
+        <input type="text" class="form-control" id="nombre" name="nombre">
+      </div>
+      <div class="mb-3">
+        <label for="apellidos" class="form-label">Apellidos</label>
+        <input type="text" class="form-control" id="apellidos" name="apellidos">
+      </div>
+      <div class="mb-3">
+        <label for="correo" class="form-label">Correo</label>
+        <input type="email" class="form-control" id="correo" name="correo" aria-describedby="emailHelp">
+        <div id="emailHelp" class="form-text">Nunca compartiremos su correo electrónico con nadie más.</div>
+      </div>
+      <div class="mb-3">
+        <label for="telefono" class="form-label">telefono</label>
+        <input type="text" class="form-control" id="telefono" name="telefono">
+      </div>
+      <div class="mb-3">
+        <label for="mensaje" class="form-label">Mensaje</label>
+        <textarea class="form-control" id="mensaje" name="mensaje" rows="3"></textarea>
+      </div>
+      <button type="submit" class="btn btn-success">Submit</button>
+    </form>
+  </div>
+</section>
 
-<div class="text-center mb-5 mt-5 w-50 mx-auto ">
-  <button class="btn btn-primary">
-    <a href="Views/template/ia.php">Checkout</a>
-  </button>
+<!-- Boton flotante -->
+<div class="chatbot">
+  <a href="Views/template/ia.php"><i class='bx bx-bot'></i></a>
 </div>
 
 
