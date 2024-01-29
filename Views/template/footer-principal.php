@@ -1,7 +1,7 @@
 <!-- copyright section start -->
 <div class="copyright_section">
   <div class="container">
-    <p class="copyright_text">© <?php echo date('Y'); ?> <a href="#"></a></p>
+    <p class="copyright_text">&copy; Ferreteria DAO - Cuenca, Ecuador <a href="#"></a></p>
   </div>
 </div>
 <!-- copyright section end -->

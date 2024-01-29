@@ -85,7 +85,7 @@
                   <div class="col-sm-12">
                      <div class="custom_menu">
                         <ul>
-                           <li><a href="#">Tienda Online</a></li>
+                           <li><a href="#">Ferreteria DAO</a></li>
                         </ul>
                      </div>
                   </div>

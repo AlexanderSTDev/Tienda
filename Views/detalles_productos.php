@@ -34,7 +34,7 @@ if ($id == '' || $token == '') {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ferreteria DAO</title>
     <link rel="stylesheet" href="../assets/principal/css/animate.min.css">
     <link rel="stylesheet" href="../assets/principal/css/bootstrap-grid.min.css">
     <link rel="stylesheet" href="../assets/principal/css/bootstrap-grid.min.css.map">
@@ -66,7 +66,7 @@ if ($id == '' || $token == '') {
                     <div class="col-sm-12">
                         <div class="custom_menu">
                             <ul>
-                                <li><a href="#">Tienda Online</a></li>
+                                <li><a href="http://localhost/Tienda">Ferreteria DAO</a></li>
                             </ul>
                         </div>
                     </div>
@@ -89,6 +89,11 @@ if ($id == '' || $token == '') {
             </div>
         </div>
 
+        <br>
+        <br>
+        <br>
+
+        <?php include_once './template/footer-principal.php' ?>
 
 </body>
 
